@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login page</title>
+    <style>
+        /* Your existing styles remain unchanged */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74EBD5 0%, #9FACE6 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 340px;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+        }
+
+        h1 {
+            color: #0056b3;
+            text-shadow: 1px 1px 0px #fff;
+            margin-bottom: 20px;
+        }
+
+        label, .register-btn {
+            display: block;
+            margin-top: 20px;
+            color: #000;
+        }
+
+        input[type=text], input[type=password], input[type=submit], .register-btn {
+            width: calc(100% - 20px);
+            margin-top: 5px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+
+        input[type=submit], .register-btn {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover, .register-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .register-btn {
+            text-align: center;
+            margin: auto;
+            display: inline-block;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Academic Records</h1>
+        <form action="check.php" method="post">
+            <label for="db_user">Username</label>
+            <input type="text" id="db_user" name="db_user">
+            <br>
+
+            <label for="db_pass">Password</label>
+            <input type="password" id="db_pass" name="db_pass">
+            <br>
+            
+            <input type="submit" value="Login">
+        </form>
+        <!-- Register button/link -->
+        <a href="register.html" class="register-btn">Register</a>
+    </div>
+    <script>
+        // Existing JavaScript for handling query parameters remains unchanged
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const error = urlParams.get('error');
+            if (error) {
+                alert(error);
+            }
+        };
+    </script>
+</body>
+</html>
