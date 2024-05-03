@@ -11,9 +11,9 @@ if (!isset($_POST['db_user']) || !isset($_POST['db_pass'])) {
 
 // Database connection 
 $host = "localhost:3306";
-$database = "CP476";
-$db_user = "root"; 
-$db_pass = "62538485kyq"; 
+$database = "CP476"; //your database name
+$db_user = "your name"; 
+$db_pass = "your password"; 
 
 try {
     // Establish database connection
