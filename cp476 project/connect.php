@@ -1,8 +1,8 @@
 <?php
 //This file is using to connect to the database
 $servername = "localhost:3306";  //enter you self info from your database
-$username = "root";
-$password = "62538485kyq";
+$username = "your username";
+$password = "your password";
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=CP476", $username, $password);
